@@ -4,6 +4,9 @@ export const getPeople = state => state.people.items.sort((a, b) => {
 
 export const getLoading = state => state.people.loading
 
+//SEARCH
+export const peopleSearch = state => state.people.search
+
 
 //PAGINATION
 export const paginationPeople = state => state.people.paginationPeople.results

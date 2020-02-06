@@ -1,5 +1,6 @@
 import {ActionType} from '../actionType'
 
+// FECTH STARSHIPS
 export const fetchStarshipsByIdRequest = () => ({
   type: ActionType.FETCH_STARSHIPS_BY_ID_REQUEST,
   payload : {}
@@ -14,6 +15,24 @@ export const fetchStarshipsByIdSuccess = planets => ({
 
 export const fetchStarshipsByIdError = error => ({
   type: ActionType.FETCH_STARSHIPS_BY_ID_ERROR,
+  payload : {
+    error,
+  }
+});
+
+// STARSHIPS SEARCH
+export const searchStarshipsRequest = () => ({
+  type: ActionType.SEARCH_STARSHIPS_REQUEST,
+  payload : {}
+});
+
+export const searchStarshipsSuccess = starships => ({
+  type: ActionType.SEARCH_STARSHIPS_SUCCESS,
+  payload : starships
+});
+
+export const searchStarshipsError = error => ({
+  type: ActionType.SEARCH_STARSHIPS_ERROR,
   payload : {
     error,
   }

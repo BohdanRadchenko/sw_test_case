@@ -13,7 +13,7 @@ import StarshipsList from "../../Starships/StarshipsList/StarshipsList";
 import VehiclesList from "../../Vehicles/VehiclesList/VehiclesList";
 import SpeciesList from '../../Species/SpeciesList/SpeciesList'
 
-import css from './DetailPeople.module.css'
+import css from '../../detail.module.css'
 
 const DetailPeople = ({
                         name,
@@ -45,14 +45,38 @@ const DetailPeople = ({
 
   return (
      <div className={css.container}>
-      <p className={css.p}>Name : {name}</p>
-      <p className={css.p}>height : {height}</p>
-      <p className={css.p}>mass : {mass}</p>
-      <p className={css.p}>hair_color : {hair_color}</p>
-      <p className={css.p}>skin_color : {skin_color}</p>
-      <p className={css.p}>eye_color : {eye_color}</p>
-      <p className={css.p}>birth_year : {birth_year}</p>
-      <p className={css.p}>gender : {gender}</p>
+       <div className={css.desc}>
+      <p className={css.p}>Name:</p>
+      <p className={css.i}>{name}</p>
+       </div>
+       <div className={css.desc}>
+      <p className={css.p}>height:</p>
+      <p className={css.i}>{height}</p>
+       </div>
+       <div className={css.desc}>
+      <p className={css.p}>hair color:</p>
+      <p className={css.i}>{hair_color}</p>
+       </div>
+       <div className={css.desc}>
+      <p className={css.p}>mass:</p>
+      <p className={css.i}>{mass}</p>
+       </div>
+       <div className={css.desc}>
+      <p className={css.p}>skin color:</p>
+      <p className={css.i}>{skin_color}</p>
+       </div>
+       <div className={css.desc}>
+      <p className={css.p}>eye color:</p>
+      <p className={css.i}>{eye_color}</p>
+       </div>
+       <div className={css.desc}>
+      <p className={css.p}>birth year:</p>
+      <p className={css.i}>{birth_year}</p>
+       </div>
+       <div className={css.desc}>
+      <p className={css.p}>gender:</p>
+      <p className={css.i}>{gender}</p>
+       </div>
 
     {/*FILMS*/}
     {!!allFilms.length && (

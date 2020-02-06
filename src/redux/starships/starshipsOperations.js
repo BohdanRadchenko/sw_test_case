@@ -4,8 +4,12 @@ import {
   fetchStarshipsByIdSuccess,
   fetchStarshipsByIdError,
   fetchPaginationStarshipsRequest,
-  fetchPaginationStarshipsSuccess
+  fetchPaginationStarshipsSuccess,
+  searchStarshipsError,
+  searchStarshipsSuccess,
+  searchStarshipsRequest
 } from './starshipsActions';
+
 
 export const fetchStarshipsById = (count) => dispatch => {
 const URL = `https://swapi.co/api/starships/${count}`
@@ -18,6 +22,22 @@ const URL = `https://swapi.co/api/starships/${count}`
     .catch(error => {
       console.log(error.message)
       dispatch(fetchStarshipsByIdError(error));
+    });
+};
+
+
+//SEARCH
+export const searchStarships = (name) => dispatch => {
+  const URL = `https://swapi.co/api/starships/?search=${name}`;
+  dispatch(searchStarshipsRequest());
+  axios
+    .get(URL)
+    .then(response => {
+      dispatch(searchStarshipsSuccess(response.data.results));
+    })
+    .catch(error => {
+      console.log(error.message)
+      dispatch(searchStarshipsError(error));
     });
 };
 

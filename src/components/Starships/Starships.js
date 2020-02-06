@@ -7,8 +7,10 @@ import * as starshipsSelectors from '../../redux/starships/starshipsSelectors'
 import * as starshipsOperation from '../../redux/starships/starshipsOperations'
 
 import css from './Starships.module.css'
+import SearchForm from "../SearchForm/SearchForm";
+import * as planetsSelectors from "../../redux/planets/planetsSelectors";
 
-const Species = ({fetchPaginationStarships, starships, prev, next, history}) => {
+const Species = ({fetchPaginationStarships, starships, prev, next, history, starshipsSearch}) => {
   const [count, setCount] = useState(1)
 
   useEffect(() => {
@@ -31,16 +33,33 @@ const Species = ({fetchPaginationStarships, starships, prev, next, history}) => 
 
   return (
     <div className={css.container}>
-      {!starships && <Loaders/>}
-      {starships && (
+      <SearchForm component={'starships'}/>
+
+      {starshipsSearch.length !== 0 && (
         <ul className={css.list}>
-          {starships.map((el, i) =>
+          {starshipsSearch.map((el, i) =>
             <li key={i}
-                className={css.item}
-                onClick={() => handleMoreClick(el)}>
+                onClick={() => handleMoreClick(el)}
+                className={css.item}>
               <p>{el.name}</p>
             </li>)}
         </ul>
+      )}
+
+      {starshipsSearch.length === 0 && (
+        <>
+          {!starships && <Loaders/>}
+          {starships && (
+            <ul className={css.list}>
+              {starships.map((el, i) =>
+                <li key={i}
+                    className={css.item}
+                    onClick={() => handleMoreClick(el)}>
+                  <p>{el.name}</p>
+                </li>)}
+            </ul>
+          )}
+        </>
       )}
       <PaginationBar {...{handleButtonClick, next, prev}}/>
     </div>
@@ -50,6 +69,8 @@ const mSTP = state => ({
   starships : starshipsSelectors.paginationStarships(state),
   prev : starshipsSelectors.starshipsPrev(state),
   next : starshipsSelectors.starshipsNext(state),
+  starshipsSearch : starshipsSelectors.starshipsSearch(state)
+
 })
 
 const mDTP = {

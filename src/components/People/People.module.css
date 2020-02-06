@@ -17,6 +17,7 @@
 }
 
 .item {
+    height: 86px;
     border: 1px solid #afb7bf;
     border-radius: 4px;
     width: 30%;
@@ -24,6 +25,7 @@
     padding: 0 15px;
     display: block;
     text-align: center;
+    vertical-align: middle;
     cursor: pointer;
 }
 

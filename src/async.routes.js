@@ -49,4 +49,8 @@ export const AsyncDetailVehicles = lazy(() =>
   import('./pages/DetailVehiclesPage'),
 );
 
+export const AsyncGlobalSearch= lazy(() =>
+  import('./pages/GlobalSearchPage'),
+);
+
 

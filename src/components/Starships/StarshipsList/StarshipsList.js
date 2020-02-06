@@ -6,11 +6,6 @@ import { Loaders } from "../../Loaders";
 
 import css from "../../list.module.css";
 
-const style = {
-  position: 'relative',
-  display : 'block'
-}
-
 const SpeciesList = ({starships, loading}) => {
   return (
     <div className={css.container}>

@@ -11,7 +11,6 @@ import css from './App.module.css'
 
 const routes = useRoutes()
 
-
 class App extends Component {
   componentDidMount() {
     this.props.fetchFilms()
@@ -19,7 +18,7 @@ class App extends Component {
 
   render() {
     return (<Suspense fallback={<Loaders/>}>
-      <Router>
+      <Router basename='/sw_test_case'>
         <div className={css.container}>
           <div className={css.dashboard}>
             <div className={css.leftSide}>

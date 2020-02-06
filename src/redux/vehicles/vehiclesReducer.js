@@ -1,6 +1,7 @@
 import { combineReducers } from 'redux';
 import { ActionType } from '../actionType';
 
+//FETCH VEHICLES
 const vehiclesReducers = (state = [], { type, payload }) => {
   switch (type) {
     case ActionType.FETCH_VEHICLES_BY_ID_REQUEST:
@@ -42,6 +43,20 @@ const errorReducer = (state = null, { type, payload }) => {
   }
 };
 
+//SEARCH VEHICLES
+const searchVehiclesReducer = (state = [], {type, payload}) => {
+  switch (type) {
+    case ActionType.SEARCH_VEHICLES_REQUEST :
+      return []
+
+    case ActionType.SEARCH_VEHICLES_SUCCESS :
+      return payload;
+
+    default:
+      return state;
+  }
+}
+
 //PAGINATION
 const paginationVehiclesReducer = (state = [], {type, payload}) => {
   switch (type) {
@@ -60,5 +75,6 @@ export default combineReducers({
   items: vehiclesReducers,
   loading: loadingReducer,
   error: errorReducer,
-  paginationVehicles : paginationVehiclesReducer
+  paginationVehicles : paginationVehiclesReducer,
+  search : searchVehiclesReducer,
 });

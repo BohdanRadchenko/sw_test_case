@@ -4,7 +4,9 @@ import {
   fetchPeopleByIdSuccess,
   fetchPeopleByIdError,
   fetchPaginationPeopleRequest,
-  fetchPaginationPeopleSuccess
+  fetchPaginationPeopleSuccess,
+  searchPeopleRequest,
+  searchPeopleSuccess, searchPeopleError
 } from './peopleActions';
 
 
@@ -22,6 +24,23 @@ const URL = `https://swapi.co/api/people/${count}`
     });
 };
 
+//SEARCH
+export const searchPeople = (name) => dispatch => {
+  const URL = `https://swapi.co/api/people/?search=${name}`;
+  dispatch(searchPeopleRequest());
+  axios
+    .get(URL)
+    .then(response => {
+      dispatch(searchPeopleSuccess(response.data.results));
+    })
+    .catch(error => {
+      console.log(error.message)
+      dispatch(searchPeopleError(error));
+    });
+};
+
+
+//FETCH PAGINATION
 export const fetchPaginationPeople = page => dispatch => {
   dispatch(fetchPaginationPeopleRequest())
   const URL = `https://swapi.co/api/people/?page=${page}`

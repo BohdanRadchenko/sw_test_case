@@ -42,6 +42,20 @@ const errorReducer = (state = null, { type, payload }) => {
   }
 };
 
+//SEARCH PLANETS
+const searchPlanetsReducer = (state = [], {type, payload}) => {
+  switch (type) {
+    case ActionType.SEARCH_PLANETS_REQUEST :
+      return []
+
+    case ActionType.SEARCH_PLANETS_SUCCESS :
+      return payload;
+
+    default:
+      return state;
+  }
+}
+
 //PAGINATION
 const paginationPlanetsReducer = (state = [], {type, payload}) => {
   switch (type) {
@@ -60,5 +74,6 @@ export default combineReducers({
   items: peopleReducer,
   loading: loadingReducer,
   error: errorReducer,
-  paginationPlanets : paginationPlanetsReducer
+  paginationPlanets : paginationPlanetsReducer,
+  search : searchPlanetsReducer,
 });

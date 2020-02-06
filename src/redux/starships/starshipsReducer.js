@@ -42,6 +42,20 @@ const errorReducer = (state = null, { type, payload }) => {
   }
 };
 
+//SEARCH STARSHIPS
+const searchStarshipsReducer = (state = [], {type, payload}) => {
+  switch (type) {
+    case ActionType.SEARCH_STARSHIPS_REQUEST :
+      return []
+
+    case ActionType.SEARCH_STARSHIPS_SUCCESS :
+      return payload;
+
+    default:
+      return state;
+  }
+}
+
 //PAGINATION
 const paginationStarshipsReducer = (state = [], {type, payload}) => {
   switch (type) {
@@ -61,4 +75,5 @@ export default combineReducers({
   loading: loadingReducer,
   error: errorReducer,
   paginationStarships : paginationStarshipsReducer,
+  search : searchStarshipsReducer,
 });

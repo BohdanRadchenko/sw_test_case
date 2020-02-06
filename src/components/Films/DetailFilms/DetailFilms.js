@@ -14,7 +14,7 @@ import StarshipsList from "../../Starships/StarshipsList/StarshipsList";
 import PlanetsList from "../../Planets/PlanetsList/PlanetsList";
 import PeopleList from "../../People/PeopleList/PeopleList";
 
-import css from './DetailFilms.module.css'
+import css from '../../detail.module.css'
 
 const DetailFilms = ({
   people,
@@ -47,11 +47,26 @@ const DetailFilms = ({
 
   return (
     <div className={css.container}>
-      <p  className={css.p}>Title: <span>{title}</span> </p>
-      <p  className={css.p}>Decription: <span>{opening_crawl}</span> </p>
-      <p  className={css.p}>Director: {director}</p>
-      <p  className={css.p}>Producer: {producer}</p>
-      <p  className={css.p}>Release Date: {release_date}</p>
+      <div className={css.desc}>
+        <p  className={css.p}>Title:</p>
+        <p  className={css.i}>{title}</p>
+      </div>
+      <div className={css.desc}>
+        <p  className={css.p}>Decription:</p>
+        <p  className={css.i}>{opening_crawl}</p>
+      </div>
+      <div className={css.desc}>
+        <p  className={css.p}>Director:</p>
+        <p  className={css.i}>{director}</p>
+      </div>
+      <div className={css.desc}>
+        <p  className={css.p}>Producer:</p>
+        <p  className={css.i}>{producer}</p>
+      </div>
+      <div className={css.desc}>
+        <p  className={css.p}>Release Date:</p>
+        <p  className={css.i}>{release_date}</p>
+      </div>
 
       {/*CHARACTERS*/}
       {!!characters.length && (

@@ -56,9 +56,24 @@ const paginationPeopleReducer = (state = [], {type, payload}) => {
   }
 }
 
+//SEARCH
+const searchPeopleReducer = (state = [], {type, payload}) => {
+  switch (type) {
+    case ActionType.SEARCH_PEOPLE_REQUEST :
+      return []
+
+    case ActionType.SEARCH_PEOPLE_SUCCESS :
+      return payload;
+
+    default:
+      return state;
+  }
+}
+
 export default combineReducers({
   items: peopleReducer,
   loading: loadingReducer,
   error: errorReducer,
   paginationPeople : paginationPeopleReducer,
+  search : searchPeopleReducer,
 });

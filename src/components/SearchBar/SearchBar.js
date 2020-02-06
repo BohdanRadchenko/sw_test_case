@@ -6,7 +6,7 @@ const SearchBar = ({handleSearchChange}) => {
     <div className={css.container}>
       <form className={css.form}>
         <input
-          placeholder='Search Films...'
+          placeholder = {`Search...`}
           className={css.input}
           type="text"
           onChange={(e) => handleSearchChange(e.target.value)}/>

@@ -7,8 +7,10 @@ import * as speciesSelectors from '../../redux/species/speciesSelectors'
 import { Loaders } from "../Loaders";
 
 import css from './Species.module.css'
+import * as planetsSelectors from "../../redux/planets/planetsSelectors";
+import SearchForm from "../SearchForm/SearchForm";
 
-const Species = ({fetchPaginationSpecies, species, prev, next, history}) => {
+const Species = ({fetchPaginationSpecies, species, prev, next, history, speciesSearch}) => {
   const [count, setCount] = useState(1)
 
   useEffect(() => {
@@ -31,16 +33,33 @@ const Species = ({fetchPaginationSpecies, species, prev, next, history}) => {
 
   return (
     <div className={css.container}>
-      {!species && <Loaders/>}
-      {species && (
+      <SearchForm component={'species'}/>
+
+      {speciesSearch.length !== 0 && (
         <ul className={css.list}>
-          {species.map((el, i) =>
+          {speciesSearch.map((el, i) =>
             <li key={i}
-                className={css.item}
-                onClick={() => handleMoreClick(el)}>
+                onClick={() => handleMoreClick(el)}
+                className={css.item}>
               <p>{el.name}</p>
             </li>)}
         </ul>
+      )}
+
+      {speciesSearch.length === 0 && (
+        <>
+        {!species && <Loaders/>}
+      {species && (
+        <ul className={css.list}>
+        {species.map((el, i) =>
+          <li key={i}
+              className={css.item}
+              onClick={() => handleMoreClick(el)}>
+            <p>{el.name}</p>
+          </li>)}
+        </ul>
+        )}
+        </>
       )}
       <PaginationBar {...{handleButtonClick, next, prev}}/>
     </div>
@@ -50,6 +69,7 @@ const mSTP = state => ({
   species : speciesSelectors.paginationSpecies(state),
   prev : speciesSelectors.speciesPrev(state),
   next : speciesSelectors.speciesNext(state),
+  speciesSearch : speciesSelectors.speciesSearch(state)
 })
 
 const mDTP = {

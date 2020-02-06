@@ -5,7 +5,8 @@ import { connect } from "react-redux";
 import { NavLink, useHistory} from "react-router-dom";
 import FilmsList from "../../Films/FilmsList/FilmsList";
 import PeopleList from "../../People/PeopleList/PeopleList";
-import css from "../../Vehicles/DetailVehicles/DetailVehicles.module.css";
+
+import css from '../../detail.module.css'
 
 const DetailPlanets = ({
                          name,
@@ -35,15 +36,42 @@ const DetailPlanets = ({
   })
 
   return (<div className={css.container}>
-    <p className={css.p}>Name : {name}</p>
-    <p className={css.p}>rotation_period : {rotation_period}</p>
-    <p className={css.p}>orbital_period : {orbital_period}</p>
-    <p className={css.p}>diameter : {diameter}</p>
-    <p className={css.p}>climate : {climate}</p>
-    <p className={css.p}>gravity : {gravity}</p>
-    <p className={css.p}>terrain : {terrain}</p>
-    <p className={css.p}>surface_water : {surface_water}</p>
-    <p className={css.p}>population : {population}</p>
+    <div className={css.desc}>
+    <p className={css.p}>Name:</p>
+    <p className={css.i}>{name}</p>
+    </div>
+    <div className={css.desc}>
+    <p className={css.p}>rotation period:</p>
+    <p className={css.i}>{rotation_period}</p>
+    </div>
+    <div className={css.desc}>
+    <p className={css.p}>orbital period:</p>
+    <p className={css.i}>{orbital_period}</p>
+    </div>
+    <div className={css.desc}>
+    <p className={css.p}>diameter:</p>
+    <p className={css.i}>{diameter}</p>
+    </div>
+    <div className={css.desc}>
+    <p className={css.p}>climate</p>
+    <p className={css.i}>{climate}</p>
+    </div>
+    <div className={css.desc}>
+    <p className={css.p}>gravity:</p>
+    <p className={css.i}>{gravity}</p>
+    </div>
+    <div className={css.desc}>
+    <p className={css.p}>terrain:</p>
+    <p className={css.i}>{terrain}</p>
+    </div>
+    <div className={css.desc}>
+    <p className={css.p}>surface water:</p>
+    <p className={css.i}>{surface_water}</p>
+    </div>
+    <div className={css.desc}>
+    <p className={css.p}>population:</p>
+    <p className={css.i}>{population}</p>
+    </div>
 
     {/*FILMS*/}
     {!!allFilms.length && (

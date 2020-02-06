@@ -1,5 +1,6 @@
 import {ActionType} from '../actionType'
 
+//FETCH VEHICLES
 export const fetchVehiclesByIdRequest = () => ({
   type: ActionType.FETCH_VEHICLES_BY_ID_REQUEST,
 });
@@ -13,6 +14,24 @@ export const fetchVehiclesByIdSuccess = vehicles => ({
 
 export const fetchVehiclesByIdError = error => ({
   type: ActionType.FETCH_VEHICLES_BY_ID_ERROR,
+  payload : {
+    error,
+  }
+});
+
+// VEHICLES SEARCH
+export const searchVehiclesRequest = () => ({
+  type: ActionType.SEARCH_VEHICLES_REQUEST,
+  payload : {}
+});
+
+export const searchVehiclesSuccess = vehicles => ({
+  type: ActionType.SEARCH_VEHICLES_SUCCESS,
+  payload : vehicles
+});
+
+export const searchVehiclesError = error => ({
+  type: ActionType.SEARCH_VEHICLES_ERROR,
   payload : {
     error,
   }

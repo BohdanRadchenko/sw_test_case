@@ -11,7 +11,7 @@ import { NavLink, useHistory } from "react-router-dom";
 import PlanetsList from "../../Planets/PlanetsList/PlanetsList";
 import PeopleList from "../../People/PeopleList/PeopleList";
 
-import css from './DetailSpacies.module.css'
+import css from '../../detail.module.css'
 
 const DetailSpecies = ({
                          allPeople,
@@ -38,15 +38,42 @@ const DetailSpecies = ({
 
   return (
     <div className={css.container}>
-    <p className={css.p}>Name : {name}</p>
-    <p className={css.p}>classification : {classification}</p>
-    <p className={css.p}>designation : {designation}</p>
-    <p className={css.p}>average_height : {average_height}</p>
-    <p className={css.p}>skin_colors : {skin_colors}</p>
-    <p className={css.p}>hair_colors : {hair_colors}</p>
-    <p className={css.p}>eye_colors : {eye_colors}</p>
-    <p className={css.p}>average_lifespan : {average_lifespan}</p>
-    <p className={css.p}>language : {language}</p>
+      <div className={css.desc}>
+    <p className={css.p}>Name:</p>
+    <p className={css.i}>{name}</p>
+      </div>
+      <div className={css.desc}>
+    <p className={css.p}>classification:</p>
+    <p className={css.i}>{classification}</p>
+      </div>
+      <div className={css.desc}>
+    <p className={css.p}>designation:</p>
+    <p className={css.i}>{designation}</p>
+      </div>
+      <div className={css.desc}>
+    <p className={css.p}>average_height:</p>
+    <p className={css.i}>{average_height}</p>
+      </div>
+      <div className={css.desc}>
+    <p className={css.p}>skin_colors:</p>
+    <p className={css.i}>{skin_colors}</p>
+      </div>
+      <div className={css.desc}>
+    <p className={css.p}>hair_colors:</p>
+    <p className={css.i}>{hair_colors}</p>
+      </div>
+      <div className={css.desc}>
+    <p className={css.p}>eye_colors:</p>
+    <p className={css.i}>{eye_colors}</p>
+      </div>
+      <div className={css.desc}>
+    <p className={css.p}>average_lifespan:</p>
+    <p className={css.i}>{average_lifespan}</p>
+      </div>
+      <div className={css.desc}>
+    <p className={css.p}>language:</p>
+    <p className={css.i}>{language}</p>
+      </div>
 
       {/*PLANETS*/}
       {!!allPlanets.length && (

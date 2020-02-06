@@ -18,7 +18,7 @@ const Films = ({allFilms, loading}) => {
   const filter = filterByName(allFilms, searchValue)
 
   return  (
-    <div>
+    <div className={css.container}>
       <SearchBar handleSearchChange={handleSearchChange}/>
       {loading && <Loaders/>}
       {!!allFilms.length && (

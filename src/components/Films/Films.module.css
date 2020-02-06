@@ -1,3 +1,7 @@
+.container {
+    padding: 30px 0;
+}
+
 .filmsList {
     width: 95%;
     margin: 0 auto;

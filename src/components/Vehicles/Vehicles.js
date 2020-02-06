@@ -5,11 +5,11 @@ import {connect} from 'react-redux'
 import { Loaders } from "../Loaders";
 import * as vehiclesSelectors from '../../redux/vehicles/vehiclesSelectors'
 import * as vehiclesOperations from '../../redux/vehicles/vehiclesOperations'
-import * as controllerActions from '../../redux/controller/controllerActions'
+import SearchForm from "../SearchForm/SearchForm";
 
 import css from './Vehicles.module.css'
 
-const Vehicles = ({fetchPaginationVehicles, vehicles, prev, next, history}) => {
+const Vehicles = ({fetchPaginationVehicles, vehicles, prev, next, history, vehiclesSearch}) => {
   const [count, setCount] = useState(1)
 
   useEffect(() => {
@@ -32,16 +32,33 @@ const Vehicles = ({fetchPaginationVehicles, vehicles, prev, next, history}) => {
 
   return (
     <div className={css.container}>
-      {!vehicles && <Loaders/>}
-      {vehicles && (
+      <SearchForm component={'vehicles'}/>
+
+      {vehiclesSearch.length !== 0 && (
         <ul className={css.list}>
-          {vehicles.map((el, i) =>
+          {vehiclesSearch.map((el, i) =>
             <li key={i}
-                className={css.item}
-                onClick={() => handleMoreClick(el)}>
-                <p>{el.name}</p>
+                onClick={() => handleMoreClick(el)}
+                className={css.item}>
+              <p>{el.name}</p>
             </li>)}
         </ul>
+      )}
+
+      {vehiclesSearch.length === 0 && (
+        <>
+          {!vehicles && <Loaders/>}
+          {vehicles && (
+            <ul className={css.list}>
+              {vehicles.map((el, i) =>
+                <li key={i}
+                    className={css.item}
+                    onClick={() => handleMoreClick(el)}>
+                  <p>{el.name}</p>
+                </li>)}
+            </ul>
+          )}
+        </>
       )}
       <PaginationBar {...{handleButtonClick, next, prev}}/>
     </div>
@@ -51,11 +68,12 @@ const mSTP = state => ({
   vehicles : vehiclesSelectors.paginationVehicles(state),
   prev : vehiclesSelectors.vehiclesPrev(state),
   next : vehiclesSelectors.vehiclesNext(state),
+  vehiclesSearch : vehiclesSelectors.vehiclesSearch(state)
+
 })
 
 const mDTP = {
   fetchPaginationVehicles : vehiclesOperations.fetchPaginationVehicles,
-  modalOnOpen : controllerActions.modalOnOpen,
 }
 
 export default withRouter(connect(mSTP, mDTP)(Vehicles));

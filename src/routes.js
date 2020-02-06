@@ -13,6 +13,7 @@ import {
   AsyncDetailSpecies,
   AsyncDetailStarships,
   AsyncDetailVehicles,
+  AsyncGlobalSearch,
 } from './async.routes'
 
 export const useRoutes = () => {
@@ -54,6 +55,9 @@ export const useRoutes = () => {
         </Route>
         <Route path="/vehicles/:id" >
           <AsyncDetailVehicles/>
+        </Route>
+        <Route path="/search/">
+          <AsyncGlobalSearch />
         </Route>
         <Redirect to="/films/"/>
       </Switch>

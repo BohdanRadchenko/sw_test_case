@@ -4,7 +4,10 @@ import {
   fetchPlanetsByIdSuccess,
   fetchPlanetsByIdError,
   fetchPaginationPlanetsRequest,
-  fetchPaginationPlanetsSuccess
+  fetchPaginationPlanetsSuccess,
+  searchPlanetsRequest,
+  searchPlanetsSuccess,
+  searchPlanetsError
 } from './planetsActions';
 
 
@@ -23,7 +26,23 @@ const URL = `https://swapi.co/api/planets/${count}`
     });
 };
 
-//
+//SEARCH
+export const searchPlanets = (name) => dispatch => {
+  const URL = `https://swapi.co/api/planets/?search=${name}`;
+  dispatch(searchPlanetsRequest());
+  axios
+    .get(URL)
+    .then(response => {
+      console.log(response.data)
+      dispatch(searchPlanetsSuccess(response.data.results));
+    })
+    .catch(error => {
+      console.log(error.message)
+      dispatch(searchPlanetsError(error));
+    });
+};
+
+// PAGINATION
 export const fetchPaginationPlanets = page => dispatch => {
   dispatch(fetchPaginationPlanetsRequest())
   const URL = `https://swapi.co/api/planets/?page=${page}`

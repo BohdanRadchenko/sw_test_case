@@ -1,20 +1,49 @@
 .container {
     width: 95%;
-    display: block;
-    position: absolute;
-    bottom: 2%;
+    margin: 0 auto;
+    padding: 30px 20px;
+    vertical-align: middle;
 }
 
-.buttonWrapper {
-    width: 60%;
+.desc {
     display: flex;
-    justify-content: space-between;
-    margin: 0 auto;
+    vertical-align: middle;
+    margin-bottom: 20px;
+}
+
+.p, .i, .title {
+    border-bottom: 1px dotted #dee7ef;
+    margin: 0;
+    margin-bottom: 4px;
+    color: #606060;
+    font-size: 16px;
+}
+
+.p {
+    width: 30%;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.i {
+    width: 70%;
+    text-align: justify;
+}
+
+.i:hover {
+    color: #131313;
+    font-weight: 500;
+}
+
+.title {
+    font-size: 16px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
 }
 
 .button {
     display: inline-block;
-    width: 240px;
+    width: 100%;
     padding: 8px 16px;
     margin-left: 4px;
     margin-right: 4px;
@@ -31,11 +60,6 @@
     color: #fff;
     cursor: pointer;
     border: none;
-}
-
-.button[disabled] {
-    pointer-events: none;
-    background-color: #bdbdbd;
 }
 
 .button:hover,

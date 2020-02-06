@@ -42,6 +42,20 @@ const errorReducer = (state = null, { type, payload }) => {
   }
 };
 
+//SEARCH SPECIES
+const searchSpeciesReducer = (state = [], {type, payload}) => {
+  switch (type) {
+    case ActionType.SEARCH_SPECIES_REQUEST :
+      return []
+
+    case ActionType.SEARCH_SPECIES_SUCCESS :
+      return payload;
+
+    default:
+      return state;
+  }
+}
+
 //PAGINATION
 const paginationSpeciesReducer = (state = [], {type, payload}) => {
   switch (type) {
@@ -60,5 +74,6 @@ export default combineReducers({
   items: speciesReducers,
   loading: loadingReducer,
   error: errorReducer,
-  paginationSpecies : paginationSpeciesReducer
+  paginationSpecies : paginationSpeciesReducer,
+  search : searchSpeciesReducer,
 });

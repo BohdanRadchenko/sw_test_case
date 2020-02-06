@@ -6,7 +6,7 @@ import * as peopleSelectors from "../../../redux/people/peopleSelectors";
 import PeopleList from "../../People/PeopleList/PeopleList";
 import FilmsList from "../../Films/FilmsList/FilmsList";
 
-import css from './DetailVehicles.module.css'
+import css from '../../detail.module.css'
 
 const DetailVehicles = ({
                           name,
@@ -39,17 +39,50 @@ const DetailVehicles = ({
 
   return (
     <div className={css.container}>
-      <p className={css.p}>Name : {name}</p>
-      <p className={css.p}>model : {model}</p>
-      <p className={css.p}>manufacturer : {manufacturer}</p>
-      <p className={css.p}>cost_in_credits : {cost_in_credits}</p>
-      <p className={css.p}>length : {length}</p>
-      <p className={css.p}>max_atmosphering_speed : {max_atmosphering_speed}</p>
-      <p className={css.p}>crew : {crew}</p>
-      <p className={css.p}>passengers : {passengers}</p>
-      <p className={css.p}>cargo_capacity : {cargo_capacity}</p>
-      <p className={css.p}>consumables : {consumables}</p>
-      <p className={css.p}>vehicle_class : {vehicle_class}</p>
+      <div className={css.desc}>
+      <p className={css.p}>Name:</p>
+      <p className={css.i}>{name}</p>
+      </div>
+      <div className={css.desc}>
+      <p className={css.p}>model:</p>
+      <p className={css.i}>{model}</p>
+      </div>
+      <div className={css.desc}>
+      <p className={css.p}>manufacturer:</p>
+      <p className={css.i}>{manufacturer}</p>
+      </div>
+      <div className={css.desc}>
+      <p className={css.p}>cost in credits:</p>
+      <p className={css.i}>{cost_in_credits}</p>
+      </div>
+      <div className={css.desc}>
+      <p className={css.p}>length:</p>
+      <p className={css.i}>{length}</p>
+      </div>
+      <div className={css.desc}>
+      <p className={css.p}>max atmosphering speed:</p>
+      <p className={css.i}>{max_atmosphering_speed}</p>
+      </div>
+      <div className={css.desc}>
+      <p className={css.p}>crew:</p>
+      <p className={css.i}>{crew}</p>
+      </div>
+      <div className={css.desc}>
+      <p className={css.p}>passengers:</p>
+      <p className={css.i}>{passengers}</p>
+      </div>
+      <div className={css.desc}>
+      <p className={css.p}>cargo capacity:</p>
+      <p className={css.i}>{cargo_capacity}</p>
+      </div>
+      <div className={css.desc}>
+      <p className={css.p}>consumables:</p>
+      <p className={css.i}>{consumables}</p>
+      </div>
+      <div className={css.desc}>
+      <p className={css.p}>vehicle class:</p>
+      <p className={css.i}>{vehicle_class}</p>
+      </div>
 
       {/*PILOTS*/}
       {!!allPeople.length && (

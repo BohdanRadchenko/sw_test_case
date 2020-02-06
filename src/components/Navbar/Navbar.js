@@ -43,6 +43,12 @@ const Navbar = () => {
           </NavLink>
         </li>
 
+          <li className={css.menuItem}>
+            <NavLink className={css.menuLink} activeClassName={css.activeMenuLink}  to="/search/" >
+              search
+            </NavLink>
+          </li>
+
         </ul>
     </nav>
   )
