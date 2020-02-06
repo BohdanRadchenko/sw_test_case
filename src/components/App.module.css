@@ -1,0 +1,22 @@
+.container {
+    height: 100vh;
+    position: relative;
+    display: block;
+    width: 960px;
+    margin: 0 auto;
+}
+
+.dashboard {
+    display: flex;
+}
+
+.leftSide {
+    width: 20%;
+    height: calc(100vh - 40px);
+}
+
+.rigthSide {
+    overflow-y: scroll;
+    height: calc(100vh - 40px);
+    width: 80%;
+}
