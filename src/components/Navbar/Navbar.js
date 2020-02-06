@@ -8,37 +8,37 @@ const Navbar = () => {
         <ul className={css.menuList}>
 
           <li className={css.menuItem}>
-            <NavLink className={css.menuLink} activeClassName={css.activeMenuLink}  to="/films" >
+            <NavLink className={css.menuLink} activeClassName={css.activeMenuLink}  to="/films/" >
                 films
             </NavLink>
           </li>
 
           <li className={css.menuItem}>
-            <NavLink className={css.menuLink} activeClassName={css.activeMenuLink}  to="/people" >
+            <NavLink className={css.menuLink} activeClassName={css.activeMenuLink}  to="/people/" >
                 people
             </NavLink>
           </li>
 
           <li className={css.menuItem}>
-            <NavLink className={css.menuLink} activeClassName={css.activeMenuLink}  to="/planets" >
+            <NavLink className={css.menuLink} activeClassName={css.activeMenuLink}  to="/planets/" >
                 planets
             </NavLink>
           </li>
 
           <li className={css.menuItem}>
-            <NavLink className={css.menuLink} activeClassName={css.activeMenuLink}  to="/species" >
+            <NavLink className={css.menuLink} activeClassName={css.activeMenuLink}  to="/species/" >
                 species
             </NavLink>
           </li>
 
           <li className={css.menuItem}>
-            <NavLink className={css.menuLink} activeClassName={css.activeMenuLink}  to="/starships" >
+            <NavLink className={css.menuLink} activeClassName={css.activeMenuLink}  to="/starships/" >
                 starships
             </NavLink>
           </li>
 
           <li className={css.menuItem}>
-            <NavLink className={css.menuLink} activeClassName={css.activeMenuLink}  to="/vehicles" >
+            <NavLink className={css.menuLink} activeClassName={css.activeMenuLink}  to="/vehicles/" >
                 vehicles
           </NavLink>
         </li>

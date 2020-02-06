@@ -19,37 +19,37 @@ export const useRoutes = () => {
   return (
     <div>
       <Switch>
-        <Route path="/films" exact >
+        <Route path="/films/" exact >
           <AsyncFilms/>
         </Route>
         <Route path="/films/:id" >
           <AsyncDetailFilms/>
         </Route>
-        <Route path="/people" exact>
+        <Route path="/people/" exact>
           <AsyncPeople/>
         </Route>
         <Route path="/people/:id">
           <AsyncDetailPeople/>
         </Route>
-        <Route path="/planets" exact>
+        <Route path="/planets/" exact>
           <AsyncPlanets />
         </Route>
         <Route path="/planets/:id" >
           <AsyncDetailPlanets />
         </Route>
-        <Route path="/species" exact>
+        <Route path="/species/" exact>
           <AsyncSpecies />
         </Route>
         <Route path="/species/:id">
           <AsyncDetailSpecies />
         </Route>
-        <Route path="/starships" exact >
+        <Route path="/starships/" exact >
           <AsyncStarships/>
         </Route>
         <Route path="/starships/:id" >
           <AsyncDetailStarships/>
         </Route>
-        <Route path="/vehicles" exact>
+        <Route path="/vehicles/" exact>
           <AsyncVehicles />
         </Route>
         <Route path="/vehicles/:id" >
