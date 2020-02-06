@@ -14,6 +14,8 @@ import StarshipsList from "../../Starships/StarshipsList/StarshipsList";
 import PlanetsList from "../../Planets/PlanetsList/PlanetsList";
 import PeopleList from "../../People/PeopleList/PeopleList";
 
+import css from './DetailFilms.module.css'
+
 const DetailFilms = ({
   people,
   allPlanets,
@@ -44,17 +46,17 @@ const DetailFilms = ({
   }
 
   return (
-    <div>
-      <p>Titile : {title}</p>
-      <p>Decription: {opening_crawl}</p>
-      <p>Director: {director}</p>
-      <p>Producer: {producer}</p>
-      <p>Release Date: {release_date}</p>
+    <div className={css.container}>
+      <p  className={css.p}>Title: <span>{title}</span> </p>
+      <p  className={css.p}>Decription: <span>{opening_crawl}</span> </p>
+      <p  className={css.p}>Director: {director}</p>
+      <p  className={css.p}>Producer: {producer}</p>
+      <p  className={css.p}>Release Date: {release_date}</p>
 
       {/*CHARACTERS*/}
       {!!characters.length && (
         <div>
-          <h2>characters</h2>
+          <h2 className={css.title}>characters</h2>
           <PeopleList people={people}/>
         </div>
       )}
@@ -62,7 +64,7 @@ const DetailFilms = ({
       {/*PLANETS*/}
       {!!planets.length && (
         <div>
-          <h2>planets</h2>
+          <h2 className={css.title}>planets</h2>
           <PlanetsList planets={allPlanets}/>
         </div>
       )}
@@ -70,7 +72,7 @@ const DetailFilms = ({
       {/*STARSHIPS*/}
       {!!starships.length && (
         <div>
-          <h2>starships</h2>
+          <h2 className={css.title}>starships</h2>
           <StarshipsList starships={allStarships}/>
         </div>
       )}
@@ -78,7 +80,7 @@ const DetailFilms = ({
       {/*VEHICLES*/}
       {!!vehicles.length && (
         <div>
-          <h2>vehicles</h2>
+          <h2 className={css.title}>vehicles</h2>
           <VehiclesList vehicles={allVehicles}/>
         </div>
       )}
@@ -86,12 +88,13 @@ const DetailFilms = ({
       {/*SPECIES*/}
       {!!species.length && (
         <div>
-          <h2>species</h2>
+          <h2 className={css.title}>species</h2>
           <SpeciesList species={allSpecies}/>
         </div>
       )}
 
       <button
+        className={css.button}
         onClick={handlerBack}
       >
         Back

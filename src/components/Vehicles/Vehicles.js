@@ -2,15 +2,15 @@ import React, { useEffect, useState } from 'react';
 import PaginationBar from "../PaginationBar/PaginationBar";
 import {withRouter} from 'react-router-dom';
 import {connect} from 'react-redux'
+import { Loaders } from "../Loaders";
 import * as vehiclesSelectors from '../../redux/vehicles/vehiclesSelectors'
 import * as vehiclesOperations from '../../redux/vehicles/vehiclesOperations'
 import * as controllerActions from '../../redux/controller/controllerActions'
-import Modal from "../Modal/Modal";
 
-const Vehicles = ({fetchPaginationVehicles, vehicles, prev, next, modalOnOpen, history}) => {
+import css from './Vehicles.module.css'
+
+const Vehicles = ({fetchPaginationVehicles, vehicles, prev, next, history}) => {
   const [count, setCount] = useState(1)
-
-  console.log('history', history)
 
   useEffect(() => {
     fetchPaginationVehicles(count)
@@ -25,17 +25,20 @@ const Vehicles = ({fetchPaginationVehicles, vehicles, prev, next, modalOnOpen, h
     }
   }
 
-  const handlerTest = el => {
+  const handleMoreClick = el => {
     const id = el.url.split('/')[5]
-    history.push(id)
+    history.push(`${id}/`)
   }
 
   return (
-    <div>
+    <div className={css.container}>
+      {!vehicles && <Loaders/>}
       {vehicles && (
-        <ul>
+        <ul className={css.list}>
           {vehicles.map((el, i) =>
-            <li key={i}  onClick={() => handlerTest(el)}>
+            <li key={i}
+                className={css.item}
+                onClick={() => handleMoreClick(el)}>
                 <p>{el.name}</p>
             </li>)}
         </ul>

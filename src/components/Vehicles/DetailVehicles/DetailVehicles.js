@@ -6,6 +6,8 @@ import * as peopleSelectors from "../../../redux/people/peopleSelectors";
 import PeopleList from "../../People/PeopleList/PeopleList";
 import FilmsList from "../../Films/FilmsList/FilmsList";
 
+import css from './DetailVehicles.module.css'
+
 const DetailVehicles = ({
                           name,
                           model,
@@ -36,23 +38,23 @@ const DetailVehicles = ({
   })
 
   return (
-    <div>
-      <p>Name : {name}</p>
-      <p>model : {model}</p>
-      <p>manufacturer : {manufacturer}</p>
-      <p>cost_in_credits : {cost_in_credits}</p>
-      <p>length : {length}</p>
-      <p>max_atmosphering_speed : {max_atmosphering_speed}</p>
-      <p>crew : {crew}</p>
-      <p>passengers : {passengers}</p>
-      <p>cargo_capacity : {cargo_capacity}</p>
-      <p>consumables : {consumables}</p>
-      <p>vehicle_class : {vehicle_class}</p>
+    <div className={css.container}>
+      <p className={css.p}>Name : {name}</p>
+      <p className={css.p}>model : {model}</p>
+      <p className={css.p}>manufacturer : {manufacturer}</p>
+      <p className={css.p}>cost_in_credits : {cost_in_credits}</p>
+      <p className={css.p}>length : {length}</p>
+      <p className={css.p}>max_atmosphering_speed : {max_atmosphering_speed}</p>
+      <p className={css.p}>crew : {crew}</p>
+      <p className={css.p}>passengers : {passengers}</p>
+      <p className={css.p}>cargo_capacity : {cargo_capacity}</p>
+      <p className={css.p}>consumables : {consumables}</p>
+      <p className={css.p}>vehicle_class : {vehicle_class}</p>
 
       {/*PILOTS*/}
       {!!allPeople.length && (
         <div>
-          <h2>pilots</h2>
+          <h2 className={css.title}>pilots</h2>
           <PeopleList people={allPeople}/>
         </div>
       )}
@@ -60,13 +62,13 @@ const DetailVehicles = ({
       {/*FILMS*/}
       {!!allFilms.length && (
         <div>
-          <h2>films</h2>
+          <h2 className={css.title}>films</h2>
           <FilmsList film={film}/>
         </div>
       )}
 
       <button
-        className="btn darken-4 right"
+        className={css.button}
         onClick={handlerBack}
       >
         Back

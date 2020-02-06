@@ -11,6 +11,8 @@ import { NavLink, useHistory } from "react-router-dom";
 import PlanetsList from "../../Planets/PlanetsList/PlanetsList";
 import PeopleList from "../../People/PeopleList/PeopleList";
 
+import css from './DetailSpacies.module.css'
+
 const DetailSpecies = ({
                          allPeople,
                          allPlanets,
@@ -35,21 +37,21 @@ const DetailSpecies = ({
 
 
   return (
-    <div>
-    <p>Name : {name}</p>
-    <p>classification : {classification}</p>
-    <p>designation : {designation}</p>
-    <p>average_height : {average_height}</p>
-    <p>skin_colors : {skin_colors}</p>
-    <p>hair_colors : {hair_colors}</p>
-    <p>eye_colors : {eye_colors}</p>
-    <p>average_lifespan : {average_lifespan}</p>
-    <p>language : {language}</p>
+    <div className={css.container}>
+    <p className={css.p}>Name : {name}</p>
+    <p className={css.p}>classification : {classification}</p>
+    <p className={css.p}>designation : {designation}</p>
+    <p className={css.p}>average_height : {average_height}</p>
+    <p className={css.p}>skin_colors : {skin_colors}</p>
+    <p className={css.p}>hair_colors : {hair_colors}</p>
+    <p className={css.p}>eye_colors : {eye_colors}</p>
+    <p className={css.p}>average_lifespan : {average_lifespan}</p>
+    <p className={css.p}>language : {language}</p>
 
       {/*PLANETS*/}
       {!!allPlanets.length && (
         <div>
-          <h2>homeworld</h2>
+          <h2 className={css.title}>homeworld</h2>
           <PlanetsList planets={allPlanets}/>
         </div>
       )}
@@ -57,13 +59,13 @@ const DetailSpecies = ({
       {/*PEOPLE*/}
       {!!allPeople.length && (
         <div>
-          <h2>people</h2>
+          <h2 className={css.title}>people</h2>
           <PeopleList people={allPeople}/>
         </div>
       )}
 
       <button
-        className="btn darken-4 right"
+        className={css.button}
         onClick={handlerBack}
       >
         Back

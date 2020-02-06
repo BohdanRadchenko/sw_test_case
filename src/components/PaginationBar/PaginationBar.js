@@ -1,16 +1,18 @@
 import React from 'react';
+import css from './PaginationBar.module.css'
 
 const PaginationBar = ({handleButtonClick, next, prev}) => {
   return (
-    <div>
-    <button onClick={e => handleButtonClick(e)} disabled={!prev} >
+    <div className={css.container}>
+      <div className={css.buttonWrapper}>
+    <button className={css.button} onClick={e => handleButtonClick(e)} disabled={!prev} >
       prev
     </button>
 
-    <button onClick={e => handleButtonClick(e)} disabled={!next} >
+    <button className={css.button} onClick={e => handleButtonClick(e)} disabled={!next} >
         next
     </button>
-
+      </div>
     </div>)
 }
 

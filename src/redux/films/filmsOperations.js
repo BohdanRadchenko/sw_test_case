@@ -15,6 +15,7 @@ export const fetchFilms = (page) => dispatch => {
       dispatch(fetchFilmsSuccess(response.data.results));
     })
     .catch(error => {
+      console.log(error.message)
       dispatch(fetchFilmsError(error));
     });
 };

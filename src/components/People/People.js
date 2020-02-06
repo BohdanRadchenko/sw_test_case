@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import PaginationBar from "../PaginationBar/PaginationBar";
 import {connect} from 'react-redux'
+import {withRouter} from 'react-router-dom';
+import { Loaders } from "../Loaders";
 import * as peopleOperation from '../../redux/people/peopleOperations'
 import * as peopleSelectors from '../../redux/people/peopleSelectors'
-import DrewPeopleCard from "./DrewPeopleCard/DrewPeopleCard";
 
-const People = ({fetchPaginationPeople, people, prev, next}) => {
+import css from './People.module.css'
+
+const People = ({fetchPaginationPeople, people, prev, next, history}) => {
   const [count, setCount] = useState(1)
 
   useEffect(() => {
@@ -21,14 +24,22 @@ const People = ({fetchPaginationPeople, people, prev, next}) => {
     }
   }
 
+  const handleMoreClick = el => {
+    const id = el.url.split('/')[5]
+    history.push(`${id}/`)
+  }
+
   return (
-    <div>
+    <div className={css.container}>
+      {!people && <Loaders/>}
       {people && (
-        <ul>
+        <ul className={css.list}>
           {people.map((el, i) =>
-          <li key={i}>
-            <p>{el.name}</p>
-          </li>)}
+            <li key={i}
+                onClick={() => handleMoreClick(el)}
+                className={css.item}>
+              <p>{el.name}</p>
+            </li>)}
         </ul>
       )}
     <PaginationBar {...{handleButtonClick, next, prev}}/>
@@ -45,4 +56,4 @@ const mDTP = {
   fetchPaginationPeople : peopleOperation.fetchPaginationPeople
 }
 
-export default connect(mSTP, mDTP)(People);
+export default withRouter( connect(mSTP, mDTP)(People));

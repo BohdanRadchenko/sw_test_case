@@ -2,11 +2,56 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="23e7c961-3dd0-44a7-b015-7b87adc97c7d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/PaginationBar/PaginationBar.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/People/DetailPeople/DetailPeople.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/People/People.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Planets/DetailPlanets/DetailPlanets.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Planets/Planets.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/SearchBar/SearchBar.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Species/DetailSpecies.js/DetailSpacies.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Species/Species.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Starships/DetailStarships/DetailStarships.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Starships/Starships.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Vehicles/DetailVehicles/DetailVehicles.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Vehicles/Vehicles.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/list.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Films/DetailFilms/DetailFilms.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Films/DetailFilms/DetailFilms.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Films/DetailFilms/DetailFilms.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Films/DetailFilms/DetailFilms.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Films/DrewFilmsCard/DrewFilmsCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Films/DrewFilmsCard/DrewFilmsCard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Films/DrewFilmsCard/DrewFilmsCard.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Films/DrewFilmsCard/DrewFilmsCard.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Films/Films.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Films/Films.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Films/FilmsList/FilmsList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Films/FilmsList/FilmsList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Footer/Footer.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer/Footer.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Modal/Modal.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Modal/Modal.module.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Navbar/Navbar.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbar/Navbar.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PaginationBar/PaginationBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PaginationBar/PaginationBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/People/DetailPeople/DetailPeople.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/People/DetailPeople/DetailPeople.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/People/People.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/People/People.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/People/PeopleList/PeopleList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/People/PeopleList/PeopleList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Planets/DetailPlanets/DetailPlanets.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Planets/DetailPlanets/DetailPlanets.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Planets/Planets.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Planets/Planets.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Planets/PlanetsList/PlanetsList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Planets/PlanetsList/PlanetsList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SearchBar/SearchBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SearchBar/SearchBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Species/DetailSpecies.js/DetailSpecies.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Species/DetailSpecies.js/DetailSpecies.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Species/Species.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Species/Species.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Species/SpeciesList/SpeciesList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Species/SpeciesList/SpeciesList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Starships/DetailStarships/DetailStarships.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Starships/DetailStarships/DetailStarships.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Starships/Starships.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Starships/Starships.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Starships/StarshipsList/StarshipsList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Starships/StarshipsList/StarshipsList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Vehicles/DetailVehicles/DetailVehicles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Vehicles/DetailVehicles/DetailVehicles.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Vehicles/Vehicles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Vehicles/Vehicles.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Vehicles/VehiclesList/VehiclesList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Vehicles/VehiclesList/VehiclesList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/PeoplePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/PeoplePage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/SpeciesPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/SpeciesPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/films/filmsOperations.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/films/filmsOperations.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/people/peopleOperations.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/people/peopleOperations.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/planets/planetsOperations.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/planets/planetsOperations.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/species/speciesOperations.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/species/speciesOperations.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/starships/starshipsOperations.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/starships/starshipsOperations.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/vehicles/vehiclesOperations.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/vehicles/vehiclesOperations.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,7 +62,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1XLwCbd783ergp3jjQXqe9flIq8" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -63,7 +110,7 @@
       <updated>1580838559767</updated>
       <workItem from="1580838582532" duration="22720000" />
       <workItem from="1580886401767" duration="45966000" />
-      <workItem from="1580977273217" duration="4737000" />
+      <workItem from="1580977273217" duration="18190000" />
     </task>
     <servers />
   </component>
@@ -107,13 +154,13 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="244" y="121" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1366.768@0.0.1366.768" timestamp="1580896707544" />
-    <state x="339" y="172" width="672" height="677" key="run.anything.popup" timestamp="1580944951115">
+    <state x="339" y="172" width="672" height="677" key="run.anything.popup" timestamp="1580995331314">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="339" y="172" width="672" height="677" key="run.anything.popup/0.0.1366.768@0.0.1366.768" timestamp="1580944951115" />
-    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1580981845195">
+    <state x="339" y="172" width="672" height="677" key="run.anything.popup/0.0.1366.768@0.0.1366.768" timestamp="1580995331314" />
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1581003655031">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.0.1366.768@0.0.1366.768" timestamp="1580981845195" />
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.0.1366.768@0.0.1366.768" timestamp="1581003655031" />
   </component>
 </project>

@@ -16,6 +16,7 @@ const URL = `https://swapi.co/api/starships/${count}`
       dispatch(fetchStarshipsByIdSuccess({...response.data, id : count}));
     })
     .catch(error => {
+      console.log(error.message)
       dispatch(fetchStarshipsByIdError(error));
     });
 };
@@ -26,4 +27,7 @@ export const fetchPaginationStarships = page => dispatch => {
   axios
     .get(URL)
     .then(response => dispatch(fetchPaginationStarshipsSuccess(response.data)))
+    .catch(error => {
+      console.log(error.message)
+    })
 }

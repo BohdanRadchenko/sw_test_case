@@ -17,6 +17,7 @@ const URL = `https://swapi.co/api/people/${count}`
       dispatch(fetchPeopleByIdSuccess({...response.data, id : count}));
     })
     .catch(error => {
+      console.log(error.message)
       dispatch(fetchPeopleByIdError(error));
     });
 };
@@ -27,4 +28,7 @@ export const fetchPaginationPeople = page => dispatch => {
   axios
     .get(URL)
     .then(response => dispatch(fetchPaginationPeopleSuccess(response.data)))
+    .catch(error => {
+      console.log(error.message)
+    })
 }

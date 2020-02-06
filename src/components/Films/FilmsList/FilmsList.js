@@ -4,22 +4,23 @@ import {connect} from 'react-redux'
 import * as filmsSelectors from '../../../redux/films/filmsSelectors'
 import { Loaders } from "../../Loaders";
 
-const style = {
-  position: 'relative',
-  display : 'block'
-}
+import css from '../../list.module.css'
 
 const SpeciesList = ({film, loading}) => {
   return (
-    <div style={style}>
+    <div className={css.container}>
       {loading && <Loaders/>}
       {!loading && (
         <>
           {!!film.length && (
-            <ul>
+            <ul className={css.list}>
               {film.map((el, i) => (
-                <li key={el.episode_id}>
-                  <NavLink to={`/films/${el.episode_id}`}>{el.title}</NavLink>
+                <li
+                  className={css.item}
+                  key={el.episode_id}>
+                  <NavLink
+                    className={css.link}
+                    to={`/films/${el.episode_id}`}>{el.title}</NavLink>
                 </li>
               ))}
             </ul>

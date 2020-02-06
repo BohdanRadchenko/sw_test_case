@@ -1,20 +1,40 @@
 .menu {
     display: block;
+    padding-top: 30px;
 }
 
 .menuList {
+    margin: 0;
     list-style: none;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    text-transform: uppercase;
+}
+
+.menuItem {
+    display: block;
+    margin-bottom: 4px;
 }
 
 .menuLink {
+    width: 80%;
+    margin: 0 auto;
+    padding-left: 20px;
+    border-top: 1px solid #afb7bf;
+    border-bottom: 1px solid #afb7bf;
+    display: block;
+    text-transform: uppercase;
     color: #666666;
     text-decoration: none;
+    line-height: 30px;
 }
 
 .activeMenuLink {
+    color: red;
+    border-top: 1px solid red;
+    border-bottom: 1px solid red;
+}
+
+.menuLink:hover {
+    /*color: #4c4c4c;*/
     color: red;
 }

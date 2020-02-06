@@ -3,23 +3,23 @@ import { NavLink } from "react-router-dom";
 import {connect} from 'react-redux'
 import * as vehiclesSelectors from '../../../redux/vehicles/vehiclesSelectors'
 import { Loaders } from "../../Loaders";
-
-const style = {
-  position: 'relative',
-  display : 'block'
-}
+import css from "../../list.module.css";
 
 const SpeciesList = ({vehicles, loading}) => {
   return (
-    <div style={style}>
+    <div className={css.container}>
       {loading && <Loaders/>}
       {!loading && (
         <>
           {!!vehicles.length && (
-            <ul>
+            <ul className={css.list}>
               {vehicles.map((el, i) => (
-                <li key={ i * 9}>
-                  <NavLink to={`/vehicles/${el.id}`}>{el.name}</NavLink>
+                <li
+                  className={css.item}
+                  key={ i * 9}>
+                  <NavLink
+                    className={css.link}
+                    to={`/vehicles/${el.id}`}>{el.name}</NavLink>
                 </li>
               ))}
             </ul>

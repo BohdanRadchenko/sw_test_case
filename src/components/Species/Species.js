@@ -1,10 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import PaginationBar from "../PaginationBar/PaginationBar";
 import {connect} from 'react-redux'
+import {withRouter} from 'react-router-dom';
 import * as speciesOperations from '../../redux/species/speciesOperations'
 import * as speciesSelectors from '../../redux/species/speciesSelectors'
+import { Loaders } from "../Loaders";
 
-const Species = ({fetchPaginationSpecies, species, prev, next}) => {
+import css from './Species.module.css'
+
+const Species = ({fetchPaginationSpecies, species, prev, next, history}) => {
   const [count, setCount] = useState(1)
 
   useEffect(() => {
@@ -20,12 +24,20 @@ const Species = ({fetchPaginationSpecies, species, prev, next}) => {
     }
   }
 
+  const handleMoreClick = el => {
+    const id = el.url.split('/')[5]
+    history.push(`${id}/`)
+  }
+
   return (
-    <div>
+    <div className={css.container}>
+      {!species && <Loaders/>}
       {species && (
-        <ul>
+        <ul className={css.list}>
           {species.map((el, i) =>
-            <li key={i}>
+            <li key={i}
+                className={css.item}
+                onClick={() => handleMoreClick(el)}>
               <p>{el.name}</p>
             </li>)}
         </ul>
@@ -44,5 +56,5 @@ const mDTP = {
   fetchPaginationSpecies : speciesOperations.fetchPaginationSpecies
 }
 
-export default connect(mSTP, mDTP)(Species);
+export default withRouter(connect(mSTP, mDTP)(Species));
 ;

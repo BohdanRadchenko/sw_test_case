@@ -13,7 +13,7 @@ import StarshipsList from "../../Starships/StarshipsList/StarshipsList";
 import VehiclesList from "../../Vehicles/VehiclesList/VehiclesList";
 import SpeciesList from '../../Species/SpeciesList/SpeciesList'
 
-
+import css from './DetailPeople.module.css'
 
 const DetailPeople = ({
                         name,
@@ -43,20 +43,21 @@ const DetailPeople = ({
     return arrId.includes(el.episode_id)
   })
 
-  return (<div>
-      <p>Name : {name}</p>
-      <p>height : {height}</p>
-      <p>mass : {mass}</p>
-      <p>hair_color : {hair_color}</p>
-      <p>skin_color : {skin_color}</p>
-      <p>eye_color : {eye_color}</p>
-      <p>birth_year : {birth_year}</p>
-      <p>gender : {gender}</p>
+  return (
+     <div className={css.container}>
+      <p className={css.p}>Name : {name}</p>
+      <p className={css.p}>height : {height}</p>
+      <p className={css.p}>mass : {mass}</p>
+      <p className={css.p}>hair_color : {hair_color}</p>
+      <p className={css.p}>skin_color : {skin_color}</p>
+      <p className={css.p}>eye_color : {eye_color}</p>
+      <p className={css.p}>birth_year : {birth_year}</p>
+      <p className={css.p}>gender : {gender}</p>
 
     {/*FILMS*/}
     {!!allFilms.length && (
       <div>
-        <h2>films</h2>
+        <h2 className={css.title}>films</h2>
         <FilmsList film={film}/>
       </div>
     )}
@@ -64,7 +65,7 @@ const DetailPeople = ({
       {/*PLANETS*/}
       {!!allPlanets.length && (
         <div>
-        <h2>homeworld</h2>
+        <h2 className={css.title}>homeworld</h2>
         <PlanetsList planets={allPlanets}/>
         </div>
       )}
@@ -72,7 +73,7 @@ const DetailPeople = ({
     {/*STARSHIPS*/}
     {!!allStarships.length && (
       <div>
-        <h2>starships</h2>
+        <h2 className={css.title}>starships</h2>
         <StarshipsList starships={allStarships}/>
       </div>
     )}
@@ -80,7 +81,7 @@ const DetailPeople = ({
     {/*VEHICLES*/}
     {!!allVehicles.length && (
       <div>
-        <h3>vehicles</h3>
+        <h2 className={css.title}>vehicles</h2>
         <VehiclesList vehicles={allVehicles}/>
       </div>
     )}
@@ -88,13 +89,13 @@ const DetailPeople = ({
     {/*SPECIES*/}
     {!!allSpecies.length && (
       <div>
-        <h2>species</h2>
+        <h2 className={css.title}>species</h2>
         <SpeciesList species={allSpecies}/>
       </div>
     )}
 
     <button
-      className="btn darken-4 right"
+      className={css.button}
       onClick={handlerBack}
     >
       Back

@@ -4,23 +4,28 @@ import {connect} from 'react-redux'
 import * as starshipsSelectors from '../../../redux/starships/starshipsSelectors'
 import { Loaders } from "../../Loaders";
 
+import css from "../../list.module.css";
+
 const style = {
   position: 'relative',
   display : 'block'
 }
 
 const SpeciesList = ({starships, loading}) => {
-  console.log(starships)
   return (
-    <div style={style}>
+    <div className={css.container}>
       {loading && <Loaders/>}
       {!loading && (
         <>
           {!!starships.length && (
-            <ul>
+            <ul className={css.list}>
               {starships.map((el, i) => (
-                <li key={ i * 9}>
-                  <NavLink to={`/starships/${el.id}`}>{el.name}</NavLink>
+                <li
+                  className={css.item}
+                  key={ i * 9}>
+                  <NavLink
+                    className={css.link}
+                    to={`/starships/${el.id}`}>{el.name}</NavLink>
                 </li>
               ))}
             </ul>

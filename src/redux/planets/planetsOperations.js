@@ -18,6 +18,7 @@ const URL = `https://swapi.co/api/planets/${count}`
       dispatch(fetchPlanetsByIdSuccess({...response.data, id : count}));
     })
     .catch(error => {
+      console.log(error.message)
       dispatch(fetchPlanetsByIdError(error));
     });
 };
@@ -29,4 +30,7 @@ export const fetchPaginationPlanets = page => dispatch => {
   axios
     .get(URL)
     .then(response => dispatch(fetchPaginationPlanetsSuccess(response.data)))
+    .catch(error => {
+      console.log(error.message)
+    })
 }

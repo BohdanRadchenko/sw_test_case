@@ -15,6 +15,7 @@ const URL = `https://swapi.co/api/vehicles/${count}`
       dispatch(fetchVehiclesByIdSuccess({...response.data, id : count}));
     })
     .catch(error => {
+      console.log(error.message)
       dispatch(fetchVehiclesByIdError(error));
     });
 };
@@ -25,4 +26,7 @@ export const fetchPaginationVehicles = page => dispatch => {
   axios
     .get(URL)
     .then(response => dispatch(fetchPaginationVehiclesSuccess(response.data)))
+    .catch(error => {
+      console.log(error.message)
+    })
 }

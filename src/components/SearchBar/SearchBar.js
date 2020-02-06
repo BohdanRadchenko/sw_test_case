@@ -1,10 +1,13 @@
 import React from 'react'
+import css from './SearchBar.module.css'
 
 const SearchBar = ({handleSearchChange}) => {
   return (
-    <div>
-      <form>
+    <div className={css.container}>
+      <form className={css.form}>
         <input
+          placeholder='Search Films...'
+          className={css.input}
           type="text"
           onChange={(e) => handleSearchChange(e.target.value)}/>
       </form>
