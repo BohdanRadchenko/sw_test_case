@@ -1,13 +1,15 @@
-import React, { useEffect, useState, useHistory } from 'react';
+import React, { useEffect, useState } from 'react';
 import PaginationBar from "../PaginationBar/PaginationBar";
+import {withRouter} from 'react-router-dom';
 import {connect} from 'react-redux'
 import * as vehiclesSelectors from '../../redux/vehicles/vehiclesSelectors'
 import * as vehiclesOperations from '../../redux/vehicles/vehiclesOperations'
 import * as controllerActions from '../../redux/controller/controllerActions'
 import Modal from "../Modal/Modal";
 
-const Species = ({fetchPaginationVehicles, vehicles, prev, next, modalOnOpen, history}) => {
+const Vehicles = ({fetchPaginationVehicles, vehicles, prev, next, modalOnOpen, history}) => {
   const [count, setCount] = useState(1)
+
   console.log('history', history)
 
   useEffect(() => {
@@ -24,8 +26,8 @@ const Species = ({fetchPaginationVehicles, vehicles, prev, next, modalOnOpen, hi
   }
 
   const handlerTest = el => {
-    console.log(el.url.split('/')[5])
-    modalOnOpen()
+    const id = el.url.split('/')[5]
+    history.push(id)
   }
 
   return (
@@ -53,4 +55,4 @@ const mDTP = {
   modalOnOpen : controllerActions.modalOnOpen,
 }
 
-export default connect(mSTP, mDTP)(Species);
+export default withRouter(connect(mSTP, mDTP)(Vehicles));
