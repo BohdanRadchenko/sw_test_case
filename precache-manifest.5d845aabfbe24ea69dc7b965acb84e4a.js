@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f033797776b4160e5af875e85b71829e",
+    "revision": "e3c3b7ea27901a6c576e8c8f0bf11718",
     "url": "/BohdanRadchenko/sw_test_case/index.html"
   },
   {
@@ -12,7 +12,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/BohdanRadchenko/sw_test_case/static/css/9.9564a526.chunk.css"
   },
   {
-    "revision": "baa9dcc447ba8fd58633",
+    "revision": "16beb45d3e7955d91bca",
     "url": "/BohdanRadchenko/sw_test_case/static/css/main.ef4a0b3b.chunk.css"
   },
   {
@@ -72,8 +72,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/BohdanRadchenko/sw_test_case/static/js/9.63ac7f5e.chunk.js"
   },
   {
-    "revision": "baa9dcc447ba8fd58633",
-    "url": "/BohdanRadchenko/sw_test_case/static/js/main.d7f2a094.chunk.js"
+    "revision": "16beb45d3e7955d91bca",
+    "url": "/BohdanRadchenko/sw_test_case/static/js/main.53611f14.chunk.js"
   },
   {
     "revision": "711ba7bfc026fff557a0",
