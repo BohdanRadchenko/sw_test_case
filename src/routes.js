@@ -55,7 +55,7 @@ export const useRoutes = () => {
         <Route path="/vehicles/:id" >
           <AsyncDetailVehicles/>
         </Route>
-        <Redirect to="/films"/>
+        <Redirect to="/films/"/>
       </Switch>
     </div>
   )
