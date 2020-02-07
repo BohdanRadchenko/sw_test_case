@@ -12,11 +12,11 @@
 
 .leftSide {
     width: 20%;
-    height: calc(100vh - 40px);
+    height: calc(100vh - 45px);
 }
 
 .rigthSide {
     overflow-y: scroll;
-    height: calc(100vh - 40px);
+    height: calc(100vh - 45px);
     width: 80%;
 }

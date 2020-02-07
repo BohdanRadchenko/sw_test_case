@@ -8,6 +8,7 @@ import starshipsReducer from "./starships/starshipsReducer";
 import vehiclesReducer from "./vehicles/vehiclesReducer";
 import speciesReducer from "./species/speciesReducer";
 import controllerReducer from './controller/controllerReducers';
+import globalSearchReducers from "./globalSearch/globalSearchReducers";
 
 import ReduxThunk from 'redux-thunk';
 
@@ -19,6 +20,7 @@ const rootReducer = combineReducers({
   vehicles : vehiclesReducer,
   species : speciesReducer,
   controller : controllerReducer,
+  search : globalSearchReducers
 });
 
 const middleware = [ReduxThunk];

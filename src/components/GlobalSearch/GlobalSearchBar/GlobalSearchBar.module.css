@@ -1,0 +1,105 @@
+.container {
+    width: 100%;
+    display: block;
+    padding-bottom: 30px;
+    margin: 0 auto;
+    padding: 30px 15px;
+}
+
+.form {
+    width: 100%;
+    justify-content: space-between;
+}
+
+.input {
+    font-size: 16px;
+    width: 100%;
+    padding: 10px 0;
+    padding-left: 15px;
+    border: 1px solid #afb7bf;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.input:focus {
+    outline: none;
+    box-shadow: 0 0 2px 1px #afb7bf;
+}
+
+.input::placeholder {
+    color: #8c8c8c;
+}
+
+.button {
+    text-transform: uppercase;
+    display: inline-block;
+    width: 100%;
+    padding: 8px 16px;
+    margin-left: 4px;
+    margin-right: 4px;
+    border-radius: 4px;
+    background-color: rgba(56, 132, 255, 0.7);
+    transition: all 200ms ease;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    font-style: normal;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+}
+
+
+.button:hover,
+.button:focus {
+    background-color: #1f65d6;
+}
+
+/* RADIO BUTTON */
+.label {
+    font-size: 16px;
+    line-height: 24px;
+    display: block;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+}
+
+.radioList {
+    margin: 0;
+    padding: 0;
+    display: block;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+.radioItem {
+    margin-bottom: 10px;
+}
+
+.radioLabel {
+    composes: label;
+    margin: 0;
+}
+
+.radioInput {
+    appearance: none;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #afb7bf;
+    transition: 0.2s all linear;
+    display: inline-block;
+    outline: none;
+    margin: 0;
+    margin-right: 10px;
+    position: relative;
+    top: 2px;
+}
+
+.radioInput:checked {
+    border: 4px solid #007bff;
+}
